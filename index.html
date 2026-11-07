@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A Little Website to Fix Your Mood - a playful digital surprise gift."
+    />
+    <title>A Little Website to Fix Your Mood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-glow glow-one"></div>
+    <div class="page-glow glow-two"></div>
+    <div class="floating-particles" aria-hidden="true"></div>
+
+    <main class="page-shell">
+      <section class="hero section" id="home">
+        <div class="hero-content glass-panel">
+          <p class="eyebrow">digital surprise • little love note</p>
+          <h1>HEY YOU! YES, YOU! 😤💗</h1>
+          <p class="lead">
+            Someone has prepared a little surprise for you. And no, you cannot escape this one!
+          </p>
+          <button class="primary-btn pulse-btn" id="enterBtn" type="button">
+            Okay, let's see 👀
+          </button>
+        </div>
+      </section>
+
+      <section class="mood section" id="mood">
+        <div class="section-header">
+          <p class="eyebrow">tiny mood check</p>
+          <h2>First of all... how angry are we? 😂</h2>
+        </div>
+
+        <div class="mood-options">
+          <button class="mood-btn" data-mood="angry" type="button">
+            <span class="emoji">😒</span>
+            <span>Still Angry</span>
+          </button>
+          <button class="mood-btn" data-mood="okay" type="button">
+            <span class="emoji">🙄</span>
+            <span>A Little Bit Okay</span>
+          </button>
+          <button class="mood-btn" data-mood="smiling" type="button">
+            <span class="emoji">🤭</span>
+            <span>Secretly Smiling</span>
+          </button>
+        </div>
+
+        <div class="mood-response glass-panel" id="moodResponse">
+          The mood is currently... mysterious.
+        </div>
+      </section>
+
+      <section class="letter section" id="letter">
+        <div class="section-header">
+          <p class="eyebrow">a very serious delivery</p>
+          <h2>A Letter For You 💌</h2>
+        </div>
+
+        <div class="envelope-wrap">
+          <div class="envelope" id="envelope" aria-label="Open the letter">
+            <div class="envelope-flap"></div>
+            <div class="envelope-front"></div>
+            <div class="letter-card glass-panel">
+              <p id="letterText" class="letter-text"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="plot-twist section" id="twist">
+        <div class="section-header">
+          <p class="eyebrow">plot twist time</p>
+          <h2>WAITTT... THERE'S MORE! 👀</h2>
+        </div>
+
+        <button class="surprise-box" id="surpriseBox" type="button" aria-label="Open the surprise box">
+          <span class="box-label">Open me</span>
+          <span class="box-lid"></span>
+        </button>
+
+        <div class="twist-message glass-panel" id="twistMessage">
+          Congratulations! You've officially been nominated for the award of MOST IMPORTANT PERSON IN MY LITTLE WORLD 🏆
+        </div>
+      </section>
+
+      <section class="reasons section" id="reasons">
+        <div class="section-header">
+          <p class="eyebrow">all the tiny reasons</p>
+          <h2>Reasons You Make Me Smile</h2>
+        </div>
+
+        <div class="reason-cards">
+          <button class="reason-card active" type="button" data-message="Your smile makes everything better.">
+            <span class="reason-icon">🌞</span>
+            <span>Your smile makes everything better.</span>
+          </button>
+          <button class="reason-card" type="button" data-message="Even your silly jokes are special.">
+            <span class="reason-icon">😂</span>
+            <span>Even your silly jokes are special.</span>
+          </button>
+          <button class="reason-card" type="button" data-message="You make ordinary moments memorable.">
+            <span class="reason-icon">✨</span>
+            <span>You make ordinary moments memorable.</span>
+          </button>
+          <button class="reason-card" type="button" data-message="Your presence means more than you know.">
+            <span class="reason-icon">💖</span>
+            <span>Your presence means more than you know.</span>
+          </button>
+        </div>
+
+        <div class="reason-display glass-panel" id="reasonDisplay">
+          Your smile makes everything better.
+        </div>
+      </section>
+
+      <section class="game section" id="game">
+        <div class="section-header">
+          <p class="eyebrow">tiny challenge</p>
+          <h2>Catch the Hearts ❤️</h2>
+        </div>
+
+        <div class="game-panel glass-panel">
+          <div class="score-row">
+            <span>Score</span>
+            <strong id="scoreCount">0</strong>
+          </div>
+          <div class="game-area" id="gameArea" aria-label="Heart game area"></div>
+        </div>
+      </section>
+
+      <section class="final section" id="final">
+        <div class="final-content glass-panel">
+          <p class="eyebrow">one last little question</p>
+          <h2>Okay, one last thing...</h2>
+          <p class="final-question">Can we put this little argument behind us and start with a smile? 🥺</p>
+
+          <div class="final-buttons">
+            <button class="primary-btn success-btn" id="forgiveBtn" type="button">Okay, I forgive you 💗</button>
+            <button class="secondary-btn" id="timeBtn" type="button">I need a little more time 🥹</button>
+          </div>
+
+          <div class="final-response" id="finalResponse">
+            I am still here, and I hope we can find our way back to a warm smile.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="secret-button" id="secretBtn" type="button">Don't click this 🤫</button>
+    <div class="secret-message" id="secretMessage">
+      Secret message: You're still my favourite notification. Don't let this website expose how cheesy I am. 😭💗
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
